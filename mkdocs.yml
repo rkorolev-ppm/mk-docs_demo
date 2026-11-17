@@ -21,12 +21,21 @@ theme:
     - content.code.copy
 nav:
   - Главная: index.md
+  - Путеводитель: guide.md
+  - Галерея: gallery.md
   - Работа с документацией: workflow.md
   - Примеры оформления: examples.md
 plugins:
   - search:
       lang: [ru, en]
 markdown_extensions:
+  - tables
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
   - admonition
   - pymdownx.details
   - pymdownx.superfences
