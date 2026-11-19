@@ -1,0 +1,12 @@
+{# Верхнее меню задаётся отдельно в extra.top_navigation. #}
+<nav class="md-tabs" aria-label="Основные разделы" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      {% for link in config.extra.top_navigation %}
+        <li class="md-tabs__item{% if page and page.url == link.url %} md-tabs__item--active{% endif %}">
+          <a href="{{ link.url | url }}" class="md-tabs__link"{% if page and page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
