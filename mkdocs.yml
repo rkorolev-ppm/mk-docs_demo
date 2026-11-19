@@ -3,6 +3,7 @@ site_description: Тестовый сайт MkDocs без внутренних �
 strict: true
 theme:
   name: material
+  custom_dir: overrides
   language: ru
   font: false
   palette:
@@ -15,7 +16,10 @@ theme:
         icon: material/weather-sunny
         name: Светлая тема
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.indexes
     - navigation.top
     - search.highlight
     - content.code.copy
@@ -25,6 +29,22 @@ nav:
   - Галерея: gallery.md
   - Работа с документацией: workflow.md
   - Примеры оформления: examples.md
+  - Справочник:
+      - handbook/index.md
+      - Команда:
+          - handbook/team/index.md
+          - Начало работы:
+              - handbook/team/onboarding/index.md
+              - Первый день: handbook/team/onboarding/first-day.md
+              - Инструменты: handbook/team/onboarding/tools.md
+          - Встречи: handbook/team/meetings.md
+      - Платформа:
+          - handbook/platform/index.md
+          - Архитектура: handbook/platform/architecture.md
+          - API:
+              - handbook/platform/api/index.md
+              - Наблюдения: handbook/platform/api/observations.md
+              - Ошибки: handbook/platform/api/errors.md
 plugins:
   - search:
       lang: [ru, en]
@@ -41,3 +61,17 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+
+# Верхнее меню и левое дерево nav редактируются независимо.
+extra:
+  top_navigation:
+    - title: Главная
+      url: ""
+    - title: Путеводитель
+      url: guide/
+    - title: Галерея
+      url: gallery/
+    - title: Работа с документацией
+      url: workflow/
+    - title: Примеры оформления
+      url: examples/
