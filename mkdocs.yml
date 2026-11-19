@@ -1,3 +1,4 @@
+site_url: https://rkorolev-ppm.github.io/mk-docs_demo/
 site_name: Лаборатория документации
 site_description: Тестовый сайт MkDocs без внутренних данных
 strict: true
